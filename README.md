@@ -18,7 +18,7 @@ Arcella is yet another symfony based content management system.
     $ git clone https://github.com/nplhse/arcella.git
     ```
        
-2. Install Arcella by using **make**:
+2. Install Arcella by using **composer**:
 
     ```
     $ cd ~/webroot/arcella
