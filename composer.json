@@ -1,6 +1,21 @@
 {
+    "name": "nplhse/arcella",
+    "description": "Yet another symfony powered content management system.",
+    "version": "0.0.1",
     "type": "project",
-    "license": "proprietary",
+    "homepage": "http://getarcella.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christoph Steltner",
+            "email": "mail@nplhse.com",
+            "homepage": "http://nplhse.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/nplhse/arcella/issues"
+    },
     "require": {
         "php": "^7.2.5",
         "ext-ctype": "*",
