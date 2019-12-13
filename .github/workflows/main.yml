@@ -1,4 +1,4 @@
-name: Continuous integration for arcella
+name: Continuous integration
 
 on: [push, pull_request]
 
