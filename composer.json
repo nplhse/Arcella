@@ -97,7 +97,7 @@
             "vendor/bin/ecs check tests --fix"
         ],
         "run-tests": [
-            "bin/phpunit -vv"
+            "bin/phpunit --coverage-text -vv"
         ]
     },
     "conflict": {
