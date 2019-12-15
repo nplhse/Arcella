@@ -87,6 +87,17 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "run-checks": [
+            "vendor/bin/ecs check src",
+            "vendor/bin/ecs check tests"
+        ],
+        "run-fixes": [
+            "vendor/bin/ecs check src --fix",
+            "vendor/bin/ecs check tests --fix"
+        ],
+        "run-tests": [
+            "bin/phpunit -vv"
         ]
     },
     "conflict": {
