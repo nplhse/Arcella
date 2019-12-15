@@ -40,9 +40,8 @@ jobs:
           
       - name: Check coding styles
         run: |
-          php vendor/bin/ecs check src
-          php vendor/bin/ecs check tests
+          composer run-checks
           
       - name: Run Tests
         run: |
-          php bin/phpunit --coverage-text
+          composer run-tests
