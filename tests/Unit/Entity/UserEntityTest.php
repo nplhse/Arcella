@@ -28,5 +28,9 @@ class UserEntityTest extends TestCase
         $this->assertEquals($email, $user->getEmail());
 
         $this->assertEquals($roles, $user->getRoles());
+
+        // Assert return null on currently unused functions
+        $this->assertNull($user->getSalt());
+        $this->assertNull($user->eraseCredentials());
     }
 }
