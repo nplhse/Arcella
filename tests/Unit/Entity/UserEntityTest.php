@@ -12,7 +12,6 @@ class UserEntityTest extends TestCase
         $username = 'foo';
         $password = 'bar';
         $email = 'foo@bar.com';
-        $roles = ['ROLE_USER'];
 
         $user = new User();
 
@@ -27,6 +26,11 @@ class UserEntityTest extends TestCase
         $user->setEmail($email);
         $this->assertEquals($email, $user->getEmail());
 
+        $roles = ['ROLE_USER'];
+        $this->assertEquals($roles, $user->getRoles());
+
+        $roles = ['ROLE_USER', 'ROLE_ADMIN'];
+        $user->setRoles($roles);
         $this->assertEquals($roles, $user->getRoles());
 
         // Assert return null on currently unused functions
