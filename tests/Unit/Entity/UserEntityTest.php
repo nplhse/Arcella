@@ -23,6 +23,10 @@ class UserEntityTest extends TestCase
         $user->setPassword($password);
         $this->assertEquals($password, $user->getPassword());
 
+        // See testErasingOfCredentials()
+        //$user->setPlainPassword($password);
+        //$this->assertEquals($password, $user->getPlainPassword());
+
         $user->setEmail($email);
         $this->assertEquals($email, $user->getEmail());
 
@@ -35,6 +39,18 @@ class UserEntityTest extends TestCase
 
         // Assert return null on currently unused functions
         $this->assertNull($user->getSalt());
-        $this->assertNull($user->eraseCredentials());
+    }
+
+    public function testErasingOfCredentials()
+    {
+        $password = 'bar';
+
+        $user = new User();
+
+        $user->setPlainPassword($password);
+        $this->assertEquals($password, $user->getPlainPassword());
+
+        $user->eraseCredentials();
+        $this->assertEquals(null, $user->getPlainPassword());
     }
 }
