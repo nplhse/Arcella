@@ -47,6 +47,7 @@
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.3",
         "friendsofphp/php-cs-fixer": "^2.16",
+        "symfony/css-selector": "5.0.*",
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.0",
         "symfony/profiler-pack": "*",
@@ -97,11 +98,12 @@
             "vendor/bin/ecs check src --fix",
             "vendor/bin/ecs check tests --fix"
         ],
-        "run-migrations": [
-            "doctrine:migrations:migrate"
-        ],
         "run-tests": [
             "bin/phpunit --coverage-text"
+        ],
+        "setup-db": [
+            "bin/console doctrine:migrations:migrate",
+            "bin/console doctrine:fixtures:load --no-interaction"
         ]
     },
     "conflict": {
