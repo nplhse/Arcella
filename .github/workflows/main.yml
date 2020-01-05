@@ -6,7 +6,18 @@ jobs:
   arcella:
     name: Symfony (PHP ${{ matrix.php-versions }})
     runs-on: ubuntu-latest
-        
+    
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: false
+          MYSQL_ROOT_PASSWORD: symfony
+          MYSQL_DATABASE: symfony
+        ports:
+          - 3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+ 
     strategy:
       fail-fast: false
       matrix:
@@ -41,6 +52,12 @@ jobs:
       - name: Check coding styles
         run: |
           composer run-checks
+          
+      - name: Run Migration
+        run: |
+          composer run-migrations
+        env:
+          DATABASE_URL: mysql://root:symfony@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony
           
       - name: Run Tests
         run: |
