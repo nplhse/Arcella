@@ -97,6 +97,9 @@
             "vendor/bin/ecs check src --fix",
             "vendor/bin/ecs check tests --fix"
         ],
+        "run-migrations": [
+            "doctrine:migrations:migrate"
+        ],
         "run-tests": [
             "bin/phpunit --coverage-text"
         ]
