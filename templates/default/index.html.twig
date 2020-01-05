@@ -15,6 +15,7 @@
     <ul>
         <li>Your controller at <code><a href="{{ '/Users/nplhse/Projekte/arcella/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
         <li>Your template at <code><a href="{{ '/Users/nplhse/Projekte/arcella/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
+        <li>You are <code>{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}{{ app.user.username }}{% else %}Anonymous{% endif %}</code></li>
     </ul>
 </div>
 {% endblock %}
