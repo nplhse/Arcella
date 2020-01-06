@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Form\SecurityLoginType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,7 +11,13 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
+     * Managing the login process.
+     *
      * @Route("/login", name="security_login")
+     *
+     * @param AuthenticationUtils $authenticationUtils Symfony authentication utilities
+     *
+     * @return Response The rendered response.
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -24,10 +31,20 @@ class SecurityController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        $form = $this->createForm(
+            SecurityLoginType::class,
+            [
+                'username' => $lastUsername,
+            ]
+        );
+
+        return $this->render('security/login.html.twig', ['form' => $form->createView(), 'error' => $error]);
     }
 
     /**
+     * Dummy that appears to manage the logout process, but is just there for
+     * the routing component.
+     *
      * @Route("/logout", name="security_logout")
      */
     public function logout()
