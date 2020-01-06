@@ -17,7 +17,7 @@ class SecurityController extends AbstractController
      *
      * @param AuthenticationUtils $authenticationUtils Symfony authentication utilities
      *
-     * @return Response The rendered response.
+     * @return Response the rendered response
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
