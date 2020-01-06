@@ -103,9 +103,16 @@
         "run-tests": [
             "bin/phpunit --coverage-text"
         ],
+        "setup": [
+            "@setup-db",
+            "@setup-frontend"
+        ],
         "setup-db": [
             "bin/console doctrine:migrations:migrate",
             "bin/console doctrine:fixtures:load --no-interaction"
+        ],
+        "setup-frontend": [
+            "yarn encore dev"
         ]
     },
     "conflict": {
