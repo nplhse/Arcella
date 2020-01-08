@@ -2,13 +2,39 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>{% block title %}Arcella{% endblock %}</title>
+
+        <!-- Stylesheets -->
         {% block stylesheets %}
             {{ encore_entry_link_tags('main') }}
         {% endblock %}
     </head>
     <body>
+        <!-- Header -->
+        {% block navbar %}
+            {% include 'elements/navbar.html.twig' %}
+        {% endblock %}
+
+        <!-- Flash messages -->
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <!-- Body -->
         {% block body %}{% endblock %}
+
+        <!-- Footer -->
+        <footer class="container">
+            <p>&copy; Company 2017-2018</p>
+        </footer>
+
+        <!-- JavaScripts -->
         {% block javascripts %}
             {{ encore_entry_script_tags('main') }}
         {% endblock %}

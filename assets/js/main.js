@@ -5,12 +5,12 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
+
+// the bootstrap module doesn't export/return anything
+require("bootstrap/dist/css/bootstrap.css");
 require('../css/main.css');
 
 const $ = require('jquery');
-
-// the bootstrap module doesn't export/return anything
-require('bootstrap');
 
 $(document).ready(function() {
     $('[data-toggle="popover"]').popover();

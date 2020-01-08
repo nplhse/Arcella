@@ -1,24 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}{{ parent() }} - {{ "title.login"|trans({}, "forms") }}{% endblock %}
 
 {% block body %}
-<form method="post">
-    <h1>Log in!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{{ "title.login"|trans({}, "forms") }}</h1>
 
-    {% if error %}
-        <div class="alert alert-danger">
-            {{ error.messageKey|trans(error.messageData, 'security') }}
+            {% if error %}
+                <div class="alert alert-danger">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+
+            {{ form_start(form) }}
+
+            {{ form_row(form.username) }}
+            {{ form_row(form.password) }}
+
+            <button type="submit" class="btn btn-success">{{ "button.login"|trans({}, "forms") }} <span class="fa fa-lock"></span></button>
+
+            {{ form_end(form) }}
         </div>
-    {% endif %}
-
-    {{ form_start(form) }}
-
-    {{ form_row(form.username) }}
-    {{ form_row(form.password) }}
-
-    <button type="submit" class="btn btn-success">Login</button>
-
-    {{ form_end(form) }}
-</form>
+    </div>
+</div>
 {% endblock %}
