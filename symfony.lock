@@ -144,11 +144,23 @@
     "monolog/monolog": {
         "version": "2.0.1"
     },
+    "nette/application": {
+        "version": "v3.0.3"
+    },
+    "nette/component-model": {
+        "version": "v3.0.0"
+    },
     "nette/finder": {
         "version": "v2.5.1"
     },
+    "nette/http": {
+        "version": "v3.0.3"
+    },
     "nette/robot-loader": {
         "version": "v3.2.0"
+    },
+    "nette/routing": {
+        "version": "v3.0.0"
     },
     "nette/utils": {
         "version": "v3.0.2"
@@ -609,6 +621,12 @@
     },
     "symfony/yaml": {
         "version": "v5.0.1"
+    },
+    "symplify/auto-bind-parameter": {
+        "version": "v7.2.1"
+    },
+    "symplify/autowire-array-parameter": {
+        "version": "v7.2.1"
     },
     "symplify/coding-standard": {
         "version": "v7.1.0"
