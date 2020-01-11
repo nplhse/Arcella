@@ -28,8 +28,6 @@ class SecurityControllerTest extends WebTestCase
 
         $response = $client->getResponse()->getContent();
 
-        var_dump($response);
-
         $this->assertTrue($client->getResponse()->isSuccessful());
         $this->assertContains('Logged in as: '.$username, $response);
 
