@@ -10,6 +10,18 @@
                 <source>user.password.not_blank</source>
                 <target>Please enter a password.</target>
             </trans-unit>
+            <trans-unit id="user.name.taken">
+                <source>user.name.taken</source>
+                <target>Username is already taken, try another one.</target>
+            </trans-unit>
+            <trans-unit id="user.email.taken">
+                <source>user.email.taken</source>
+                <target>E-Mail is already in use, try another one.</target>
+            </trans-unit>
+            <trans-unit id="user.password.mismatch">
+                <source>user.password.mismatch</source>
+                <target>The passwords don't match, please try again.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

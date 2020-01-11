@@ -20,7 +20,8 @@
             {{ form_row(form.password) }}
 
             <button type="submit" class="btn btn-success">{{ "button.login"|trans({}, "forms") }} <span class="fa fa-lock"></span></button>
-
+            &nbsp;
+            <a href="{{ path('registration') }}">{{ "action.register"|trans({}, "forms") }}</a>
             {{ form_end(form) }}
         </div>
     </div>

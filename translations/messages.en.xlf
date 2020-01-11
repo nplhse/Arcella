@@ -14,13 +14,17 @@
                 <source>link.logout</source>
                 <target>Logout</target>
             </trans-unit>
+            <trans-unit id="link.register">
+                <source>link.register</source>
+                <target>Register</target>
+            </trans-unit>
             <trans-unit id="label.logged_in_as">
                 <source>label.logged_in_as</source>
                 <target>Logged in as: %username%</target>
             </trans-unit>
             <trans-unit id="message.welcome_user">
                 <source>message.welcome_user</source>
-                <target>Welcome, username!</target>
+                <target>Welcome, %username%!</target>
             </trans-unit>
         </body>
     </file>

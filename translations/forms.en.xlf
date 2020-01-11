@@ -10,13 +10,33 @@
                 <source>label.password</source>
                 <target>Password</target>
             </trans-unit>
+            <trans-unit id="label.password_repeat">
+                <source>label.password_repeat</source>
+                <target>Repeat Password</target>
+            </trans-unit>
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>E-Mail</target>
+            </trans-unit>
             <trans-unit id="title.login">
                 <source>title.login</source>
                 <target>Login</target>
             </trans-unit>
+            <trans-unit id="title.registration">
+                <source>title.registration</source>
+                <target>Registration</target>
+            </trans-unit>
+            <trans-unit id="action.register">
+                <source>action.register</source>
+                <target>Click here to register</target>
+            </trans-unit>
             <trans-unit id="button.login">
                 <source>button.login</source>
                 <target>Login</target>
+            </trans-unit>
+            <trans-unit id="button.register">
+                <source>button.register</source>
+                <target>Register</target>
             </trans-unit>
         </body>
     </file>

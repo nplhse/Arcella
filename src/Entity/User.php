@@ -36,13 +36,16 @@ class User implements UserInterface
 
     /**
      * @var string The plain password
+     *
+     * @Assert\NotBlank(groups={"registration"})
+     * @Assert\Length(max=4096)
      */
     private $plainPassword = null;
 
     /**s
      * @Assert\Email()
      * @Assert\NotBlank()
-     * @ORM\Column(type=”string”, length=255)
+     * @ORM\Column(type=”string”, length=255, unique=true)
      */
     private $email;
 
@@ -136,6 +139,7 @@ class User implements UserInterface
     public function setPlainPassword(string $plainPassword): self
     {
         $this->plainPassword = $plainPassword;
+        $this->password = null;
 
         return $this;
     }
