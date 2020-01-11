@@ -23,9 +23,8 @@ Arcella is yet another symfony based content management system.
     ```
     $ cd ~/webroot/arcella
     $ composer install
-    $ composer setup
     ```
-3. Setup Arcella by using our custom **composer** script (including demo fixtures for the database):
+3. Setup Arcella by using our custom **composer** script (including some demo fixtures for the database):
 
     ```
     $ composer setup
