@@ -17,8 +17,6 @@ class SecurityControllerTest extends WebTestCase
         // Check if the login form can be accessed
         $crawler = $client->request('GET', '/login');
 
-        var_dump($client->getResponse()->getContent());
-
         $form = $crawler->selectButton('Login')->form();
 
         // set some values
@@ -31,7 +29,7 @@ class SecurityControllerTest extends WebTestCase
         $response = $client->getResponse()->getContent();
 
         $this->assertTrue($client->getResponse()->isSuccessful());
-        $this->assertContains('foo', $response);
+        $this->assertContains('Logged in as: '.$username, $response);
 
         // Step 2: Logout (because of Auto-Login after Registration)
         $crawler = $client->request('GET', '/logout');
