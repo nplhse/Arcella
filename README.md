@@ -7,7 +7,7 @@ Arcella is yet another symfony based content management system.
 
 # Requirements
 
-- Webserver (Apache, Nginx, LiteSpeed, IIS, etc.) with PHP 7.3 or higher
+- Webserver (Apache, Nginx, LiteSpeed, IIS, etc.) with PHP 7.4 or higher
 
 # Installation
 ## From GitHub
