@@ -112,6 +112,7 @@
             "bin/console doctrine:fixtures:load --no-interaction"
         ],
         "setup-frontend": [
+            "yarn install",
             "yarn encore dev"
         ]
     },
