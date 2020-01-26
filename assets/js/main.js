@@ -8,6 +8,8 @@
 
 // the bootstrap module doesn't export/return anything
 require("bootstrap/dist/css/bootstrap.css");
+require('bootstrap/dist/js/bootstrap.bundle');
+
 require('../css/main.css');
 
 const $ = require('jquery');
