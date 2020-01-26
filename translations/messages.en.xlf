@@ -18,6 +18,10 @@
                 <source>link.register</source>
                 <target>Register</target>
             </trans-unit>
+            <trans-unit id="link.backend">
+                <source>link.backend</source>
+                <target>Admin</target>
+            </trans-unit>
             <trans-unit id="label.logged_in_as">
                 <source>label.logged_in_as</source>
                 <target>Logged in as: %username%</target>
